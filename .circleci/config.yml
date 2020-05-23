@@ -1,0 +1,48 @@
+version: 2.1
+jobs:
+  test:
+    working_directory: ~/app
+    docker:
+      - image: circleci/openjdk:11-stretch-node
+    steps:
+      - checkout
+
+      - run: mvn test
+
+      - run: mvn package
+
+  deploy:
+    working_directory: ~/app
+    docker:
+      - image: circleci/openjdk:11-stretch-node
+    steps:
+      - checkout
+
+      - run: mvn test
+
+      - run: mvn package
+
+      - run:
+          name: Installing deployment dependencies
+          working_directory: /
+          command: |
+            sudo apt-get -y -qq update
+            sudo apt-get install python-pip python-dev build-essential
+            sudo pip install --upgrade setuptools
+            sudo pip install awsebcli --upgrade
+
+      - run:
+          name: Deploying
+          command: eb deploy RetropolisBe-env --debug
+
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - test
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
