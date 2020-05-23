@@ -1,7 +1,6 @@
 # Principle12-BE [![codurance](https://circleci.com/gh/codurance/Retropolis-BE.svg?style=shield)](https://github.com/codurance/Retropolis-BE) [![Known Vulnerabilities](https://snyk.io/test/github/codurance/Retropolis-BE/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/codurance/Retropolis-BE?targetFile=pom.xml)
 
-The back end of the Retropolis application. This is the final project for the apprentices Mar-May-2020.
-The project is a remote tool to facilitate remote retrospectives.
+The back end of Principle12. This project is a remote tool to facilitate remote retrospectives.
 
 ## Teck Stack
 
@@ -12,7 +11,7 @@ For continuous integration it uses [CircleCI](https://circleci.com/) and for the
 
 ### Run it locally
  1) Clone the project on your local machine.  <br/>
-                 `$ git clone https://github.com/codurance/Retropolis-BE.git`
+                 `$ git clone https://github.com/codurance/Principle12-BE.git`
 
  2) Navigate to the project folder and install the dependencies with the following command.  <br/>
                  `$ mvn install`
