@@ -100,10 +100,10 @@
     </dependency>
 
   </dependencies>
-  <description>Spring Boot Backend for Retropolis</description>
+  <description>Spring Boot Backend for Principle12</description>
   <groupId>com.codurance</groupId>
   <modelVersion>4.0.0</modelVersion>
-  <name>retropolis-backend</name>
+  <name>principle12-backend</name>
 
   <parent>
     <artifactId>spring-boot-starter-parent</artifactId>
