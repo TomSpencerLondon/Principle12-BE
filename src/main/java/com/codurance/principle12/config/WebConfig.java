@@ -17,10 +17,8 @@ public class WebConfig {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-      if()
-      registry.addMapping("/**").allowedMethods("*");
-//      registry.addMapping("/**")
-//          .allowedOrigins("http://retropolis-fe.s3-website.eu-west-2.amazonaws.com");
+      registry.addMapping("/**")
+          .allowedOrigins("http://principle12-fe.s3-website.eu-west-2.amazonaws.com");
     }
 
     @Override
