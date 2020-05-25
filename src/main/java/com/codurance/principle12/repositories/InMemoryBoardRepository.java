@@ -19,7 +19,6 @@ public class InMemoryBoardRepository implements BoardRepository {
         new Column(0, "Start", new ArrayList<>()),
         new Column(1, "Stop", new ArrayList<>()),
         new Column(2, "Continue", new ArrayList<>())));
-
   }
 
   @Override

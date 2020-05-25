@@ -1,31 +1,23 @@
 package com.codurance.principle12.models;
 
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Column {
 
+  @Id
   private int id;
   private String title;
+
+  @OneToMany(targetEntity = Card.class)
   private List<Card> cards;
-
-  public Column() {
-  }
-
-  public Column(int id, String title, List<Card> cards) {
-    this.id = id;
-    this.title = title;
-    this.cards = cards;
-  }
-
-  public int getId() {
-    return id;
-  }
-
-  public String getTitle() {
-    return title;
-  }
-
-  public List<Card> getCards() {
-    return cards;
-  }
 }
