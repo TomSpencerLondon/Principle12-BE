@@ -1,4 +1,4 @@
-# Principle12-BE [![codurance](https://circleci.com/gh/codurance/Retropolis-BE.svg?style=shield)](https://github.com/codurance/Retropolis-BE) [![Known Vulnerabilities](https://snyk.io/test/github/codurance/Retropolis-BE/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/codurance/Retropolis-BE?targetFile=pom.xml) [![Codecov Coverage](https://img.shields.io/codecov/c/github/TomSpencerLondon/Principle12-BE/master.svg?style=flat-square)](https://codecov.io/gh/TomSpencerLondon/Principle12-BE/)
+# Principle12-BE [![codurance](https://circleci.com/gh/codurance/Retropolis-BE.svg?style=shield)](https://github.com/codurance/Retropolis-BE) [![Known Vulnerabilities](https://snyk.io/test/github/codurance/Retropolis-BE/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/codurance/Retropolis-BE?targetFile=pom.xml) [![codecov](https://codecov.io/gh/TomSpencerLondon/Principle12-BE/branch/master/graph/badge.svg)](https://codecov.io/gh/TomSpencerLondon/Principle12-BE)
 
 The back end of Principle12. This project is a remote tool to facilitate remote retrospectives.
 

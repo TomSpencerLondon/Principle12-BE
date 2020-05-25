@@ -15,10 +15,10 @@ import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication
 @ActiveProfiles(Environment.PROD)
-public class Retropolis {
+public class Principle12 {
 
     public static void main(String[] args) {
-        SpringApplication.run(Retropolis.class, args);
+        SpringApplication.run(Principle12.class, args);
     }
 
     @Bean

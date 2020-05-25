@@ -1,6 +1,6 @@
 package com.codurance.principle12.acceptance;
 
-import com.codurance.principle12.Retropolis;
+import com.codurance.principle12.Principle12;
 import com.codurance.principle12.config.Environment;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -14,7 +14,7 @@ import org.springframework.test.context.ActiveProfiles;
 @CucumberOptions(features = "src/test/resources/features", strict = true)
 @CucumberContextConfiguration
 @ActiveProfiles(Environment.TEST)
-@SpringBootTest(classes = Retropolis.class, webEnvironment = WebEnvironment.DEFINED_PORT)
+@SpringBootTest(classes = Principle12.class, webEnvironment = WebEnvironment.DEFINED_PORT)
 public class CucumberIntegrationTest {
 
 }
