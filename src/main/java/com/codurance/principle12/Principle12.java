@@ -1,20 +1,17 @@
 package com.codurance.principle12;
 
-import com.codurance.principle12.config.Environment;
-import java.util.Collections;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.Ordered;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+import java.util.Collections;
 
 @SpringBootApplication
-@ActiveProfiles(Environment.PROD)
 public class Principle12 {
 
     public static void main(String[] args) {

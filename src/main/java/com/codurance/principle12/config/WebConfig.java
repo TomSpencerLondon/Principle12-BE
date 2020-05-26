@@ -7,9 +7,11 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import static com.codurance.principle12.config.Environment.PROD;
+
 @Configuration
 @EnableWebMvc
-@Profile("!" + Environment.TEST)
+@Profile(PROD)
 public class WebConfig {
 
   @Configuration
