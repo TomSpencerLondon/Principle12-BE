@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Card {
   @Id
-  private int id;
+  private Long id;
   private String text;
-  private int columnId;
+  private Long categoryId;
   private String userName;
 
 }

@@ -1,6 +1,6 @@
 package com.codurance.principle12.controllers;
 
-import com.codurance.principle12.exceptions.ColumnNotFoundException;
+import com.codurance.principle12.exceptions.CategoryNotFoundException;
 import com.codurance.principle12.models.Card;
 import com.codurance.principle12.requests.NewCardRequestObject;
 import com.codurance.principle12.services.CardService;
@@ -33,9 +33,9 @@ public class CardController extends BaseController {
     return cardService.addCard(request);
   }
 
-  @ExceptionHandler(ColumnNotFoundException.class)
+  @ExceptionHandler(CategoryNotFoundException.class)
   @ResponseStatus(HttpStatus.BAD_REQUEST)
-  public List<String> handleColumnNotFound(ColumnNotFoundException exception) {
+  public List<String> handleCategoryNotFound(CategoryNotFoundException exception) {
     return Collections.singletonList(exception.getMessage());
   }
 

@@ -5,7 +5,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 import com.codurance.principle12.models.Board;
-import com.codurance.principle12.models.Column;
+import com.codurance.principle12.models.Category;
 import com.codurance.principle12.utils.HttpWrapper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -31,8 +31,8 @@ public class BoardStepDefsIntegrationTest {
   public void theClientReceivesBoardWithThreeColumnsAnd(String firstTitle, String secondTitle, String thirdTitle) {
     assertThat(HttpWrapper.getResponse.getBody(),
         is(asJsonString(new Board(List.of(
-            new Column(0, firstTitle, Collections.emptyList()),
-            new Column(1, secondTitle, Collections.emptyList()),
-            new Column(2, thirdTitle, Collections.emptyList()))))));
+            new Category(0L, firstTitle, Collections.emptyList()),
+            new Category(1L, secondTitle, Collections.emptyList()),
+            new Category(2L, thirdTitle, Collections.emptyList()))))));
   }
 }

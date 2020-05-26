@@ -12,10 +12,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Column {
+public class Category {
 
   @Id
-  private int id;
+  private Long id;
+
   private String title;
 
   @OneToMany(targetEntity = Card.class)

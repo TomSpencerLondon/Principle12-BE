@@ -1,9 +1,9 @@
 package com.codurance.principle12.factories;
 
 public class CardIDGenerator {
-    private static int currentID = 0;
+    private static Long currentID = 0L;
 
-    public static int nextID() {
+    public static Long nextID() {
         return ++currentID;
     }
 }

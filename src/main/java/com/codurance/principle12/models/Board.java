@@ -21,7 +21,7 @@ public class Board {
     private Long id;
 
     @NonNull
-    @OneToMany(targetEntity = Column.class)
-    private List<Column> columns;
+    @OneToMany(targetEntity = Category.class)
+    private List<Category> categories;
 
 }

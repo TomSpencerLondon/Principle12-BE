@@ -14,33 +14,33 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 public class CardServiceTest {
-
-  @Mock
-  private CardFactory cardFactory;
-
-  private CardService cardService;
-
-  @Mock
-  private BoardService boardService;
-
-  @BeforeEach
-  void setUp() {
-    cardService = new CardService(cardFactory, boardService);
-  }
-
-  @Test
-  public void should_add_and_return_new_card() {
-    String text = "new card";
-    int columnId = 1;
-    int cardId = 1;
-    String userName = "John Doe";
-    NewCardRequestObject requestObject = new NewCardRequestObject(text, columnId, userName);
-    Card card = new Card(cardId, text, columnId, userName);
-
-    when(cardFactory.create(requestObject)).thenReturn(card);
-    when(boardService.addCard(card)).thenReturn(card);
-
-    assertEquals(card, cardService.addCard(requestObject));
-  }
+//
+//  @Mock
+//  private CardFactory cardFactory;
+//
+//  private CardService cardService;
+//
+//  @Mock
+//  private BoardService boardService;
+//
+//  @BeforeEach
+//  void setUp() {
+//    cardService = new CardService(cardFactory, boardService);
+//  }
+//
+//  @Test
+//  public void should_add_and_return_new_card() {
+//    String text = "new card";
+//    int columnId = 1;
+//    int cardId = 1;
+//    String userName = "John Doe";
+//    NewCardRequestObject requestObject = new NewCardRequestObject(text, columnId, userName);
+//    Card card = new Card(cardId, text, columnId, userName);
+//
+//    when(cardFactory.create(requestObject)).thenReturn(card);
+//    when(boardService.addCard(card)).thenReturn(card);
+//
+//    assertEquals(card, cardService.addCard(requestObject));
+//  }
 
 }

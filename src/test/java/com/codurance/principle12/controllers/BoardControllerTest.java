@@ -6,7 +6,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.codurance.principle12.models.Board;
 import com.codurance.principle12.models.Card;
-import com.codurance.principle12.models.Column;
+import com.codurance.principle12.models.Category;
 import com.codurance.principle12.services.BoardService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -45,35 +45,35 @@ public class BoardControllerTest {
 
   @Test
   void returns_board_with_columns() throws Exception {
-    int columnID = 1;
-    List<Column> columns = List.of(new Column(columnID, "start", Collections.emptyList()));
-    when(boardService.getBoard()).thenReturn(new Board(columns));
+    Long columnID = 1L;
+    List<Category> categories = List.of(new Category(columnID, "start", Collections.emptyList()));
+    when(boardService.getBoard()).thenReturn(new Board(categories));
 
     Board board = requestBoard();
 
-    assertEquals(columns.size(), board.getColumns().size());
-    Column columnResponse = board.getColumns().get(0);
-    assertEquals(columnID, columnResponse.getId());
+    assertEquals(categories.size(), board.getCategories().size());
+    Category categoryResponse = board.getCategories().get(0);
+    assertEquals(columnID, categoryResponse.getId());
   }
 
   @Test
   void returns_board_with_columns_and_cards() throws Exception {
-    int columnID = 1;
+    Long columnID = 1L;
     String text = "hello";
-    int cardId = 1;
+    Long cardId = 1L;
     String userName = "John Doe";
     List<Card> cards = List.of(new Card(cardId, text, columnID, userName));
-    List<Column> columns = List.of(new Column(columnID, "start", cards));
-    when(boardService.getBoard()).thenReturn(new Board(columns));
+    List<Category> categories = List.of(new Category(columnID, "start", cards));
+    when(boardService.getBoard()).thenReturn(new Board(categories));
 
     Board board = requestBoard();
 
-    Column columnResponse = board.getColumns().get(0);
-    assertEquals(cards.size(), columnResponse.getCards().size());
-    Card cardResponse = columnResponse.getCards().get(0);
+    Category categoryResponse = board.getCategories().get(0);
+    assertEquals(cards.size(), categoryResponse.getCards().size());
+    Card cardResponse = categoryResponse.getCards().get(0);
     assertEquals(text, cardResponse.getText());
     assertEquals(cardId, cardResponse.getId());
-    assertEquals(columnID, cardResponse.getColumnId());
+    assertEquals(columnID, cardResponse.getCategoryId());
     assertEquals(userName, cardResponse.getUserName());
   }
 

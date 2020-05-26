@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-@Component
+//@Component
 @Profile("!" + Environment.TEST)
 public class GoogleTokenAuthenticator implements HandlerInterceptor {
 
