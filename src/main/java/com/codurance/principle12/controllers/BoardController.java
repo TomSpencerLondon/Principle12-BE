@@ -20,7 +20,12 @@ public class BoardController extends BaseController {
   }
 
   @GetMapping
-  public String getBoard() {
+  public Board getBoard() {
+    return boardService.getBoard();
+  }
+
+  @GetMapping("/hello")
+  public String getHello(){
     return System.getenv("HELLO");
   }
 
