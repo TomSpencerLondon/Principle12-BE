@@ -21,9 +21,9 @@ public class WebConfig {
           .allowedOrigins("http://principle12-fe.s3-website.eu-west-2.amazonaws.com");
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-      registry.addInterceptor(new GoogleTokenAuthenticator());
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//      registry.addInterceptor(new GoogleTokenAuthenticator());
+//    }
   }
 }
