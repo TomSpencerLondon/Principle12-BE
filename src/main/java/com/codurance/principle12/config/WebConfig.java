@@ -18,7 +18,7 @@ public class WebConfig {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
       registry.addMapping("/**")
-          .allowedOrigins("http://principle12-fe.s3-website.eu-west-2.amazonaws.com");
+          .allowedOrigins("http://principle12-fe.s3-website.eu-west-2.amazonaws.com", "http://localhost:3000");
     }
 
 //    @Override
