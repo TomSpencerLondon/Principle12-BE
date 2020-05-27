@@ -44,6 +44,10 @@ jobs:
           name: Deploying
           command: eb deploy PrinciplebeEnv-env --debug
 
+      - run:
+          name: Set Environment Variables
+          command: eb setenv HELLO=${HELLO}
+
 workflows:
   version: 2
   build:
