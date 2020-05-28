@@ -5,6 +5,7 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
@@ -22,7 +23,8 @@ import static com.codurance.principle12.config.Environment.PROD;
 @Profile(PROD)
 public class GoogleTokenAuthenticator implements HandlerInterceptor {
 
-  private static final String CLIENT_ID = "726246748089-oo8hruu919d2oers0j6h8sam6o1444ug.apps.googleusercontent.com";
+  @Value("${clientID}")
+  private String CLIENT_ID;
 
   @Override
   public boolean preHandle(HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull Object handler) {
