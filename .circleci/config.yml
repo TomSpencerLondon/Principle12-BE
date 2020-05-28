@@ -46,7 +46,7 @@ jobs:
 
       - run:
           name: Set Environment Variables
-          command: eb setenv HELLO=${HELLO}
+          command: eb setenv HELLO=${HELLO} GOODBYE="GOODBYE"
 
 workflows:
   version: 2

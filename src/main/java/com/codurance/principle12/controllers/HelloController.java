@@ -13,6 +13,6 @@ public class HelloController extends BaseController {
 
   @GetMapping
   public String hello() {
-    return System.getenv("HELLO") + " THIS WORKS";
+    return System.getenv("HELLO") + System.getenv("GOODBYE") + " THIS WORKS";
   }
 }
