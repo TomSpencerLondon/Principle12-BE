@@ -5,7 +5,7 @@ import com.codurance.principle12.models.Card;
 
 public interface BoardRepository {
 
-  Board getBoard();
+  Board getBoard(Integer id);
 
   void addCard(Card card);
 }

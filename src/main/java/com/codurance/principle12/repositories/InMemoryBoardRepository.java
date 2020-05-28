@@ -23,7 +23,7 @@ public class InMemoryBoardRepository implements BoardRepository {
   }
 
   @Override
-  public Board getBoard() {
+  public Board getBoard(Integer id) {
     return board;
   }
 

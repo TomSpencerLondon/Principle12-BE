@@ -31,12 +31,12 @@ public class BoardServiceTest {
 
   @Test
   void should_return_a_board() {
-    when(boardRepository.getBoard()).thenReturn(
+    when(boardRepository.getBoard(id)).thenReturn(
         new Board(List.of(new Column(1, "Start", Collections.emptyList()))));
 
-    Board board = boardService.getBoard();
+    Board board = boardService.getBoard(id);
 
-    verify(boardRepository).getBoard();
+    verify(boardRepository).getBoard(id);
     assertEquals(1, board.getColumns().get(0).getId());
     assertEquals("Start", board.getColumns().get(0).getTitle());
     assertEquals(0, board.getColumns().get(0).getCards().size());
@@ -51,7 +51,7 @@ public class BoardServiceTest {
     assertEquals(card.getText(), cardToBeAdded.getText());
     assertEquals(card.getId(), cardToBeAdded.getId());
     assertEquals(card.getColumnId(), cardToBeAdded.getColumnId());
-    assertEquals(card.getUserName(), cardToBeAdded.getUserName());
+    assertEquals(card.getUsername(), cardToBeAdded.getUsername());
   }
 
 }
