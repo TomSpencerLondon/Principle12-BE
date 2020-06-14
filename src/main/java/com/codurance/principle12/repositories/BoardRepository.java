@@ -1,11 +1,14 @@
 package com.codurance.principle12.repositories;
 
-import com.codurance.principle12.models.Board;
-import com.codurance.principle12.models.Card;
+import com.codurance.principle12.entities.Board;
+import com.codurance.principle12.entities.Card;
+import java.util.List;
 
 public interface BoardRepository {
 
-  Board getBoard();
+  Board getBoard(Long id);
 
-  void addCard(Card card);
+  List<Board> getUsersBoards(Long userId);
+
+  Board insert(Board board);
 }

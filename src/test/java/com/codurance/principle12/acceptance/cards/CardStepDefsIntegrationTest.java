@@ -5,7 +5,7 @@ import static com.codurance.principle12.utils.HttpWrapper.postResponse;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-import com.codurance.principle12.models.Card;
+import com.codurance.principle12.entities.Card;
 import com.codurance.principle12.requests.NewCardRequestObject;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.codurance.principle12.models.Board;
-import com.codurance.principle12.models.Card;
-import com.codurance.principle12.models.Column;
+import com.codurance.principle12.entities.Board;
+import com.codurance.principle12.entities.Card;
+import com.codurance.principle12.entities.Column;
 import com.codurance.principle12.services.BoardService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

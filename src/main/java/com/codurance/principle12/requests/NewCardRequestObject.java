@@ -1,37 +1,50 @@
 package com.codurance.principle12.requests;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class NewCardRequestObject {
 
-  @NotNull
+  @NotNull(message = "Text cannot be empty")
   @Size(min = 1, message = "Text must not be less than 1 character")
   private String text;
 
   @NotNull(message = "Column id cannot be empty")
-  private Integer columnId;
+  private Long columnId;
 
-  private String userName;
+  @NotNull(message = "Email is required")
+  @Email(message = "Email is invalid")
+  private String email;
+
+  private Long userId;
 
   public NewCardRequestObject() {
   }
 
-  public NewCardRequestObject(String text, Integer columnId, String userName) {
+  public NewCardRequestObject(String text, Long columnId, String email) {
     this.text = text;
     this.columnId = columnId;
-    this.userName = userName;
+    this.email = email;
   }
 
   public String getText() {
     return text;
   }
 
-  public int getColumnId() {
+  public Long getColumnId() {
     return columnId;
   }
 
-  public String getUserName() {
-    return userName;
+  public String getEmail() {
+    return email;
+  }
+
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 }

@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.codurance.principle12.models.Board;
-import com.codurance.principle12.models.Card;
-import com.codurance.principle12.models.Column;
+import com.codurance.principle12.entities.Board;
+import com.codurance.principle12.entities.Card;
+import com.codurance.principle12.entities.Column;
 import com.codurance.principle12.repositories.BoardRepository;
 import java.util.Collections;
 import java.util.List;

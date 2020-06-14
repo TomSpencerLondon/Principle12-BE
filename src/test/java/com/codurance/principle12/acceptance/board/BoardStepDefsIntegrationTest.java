@@ -4,8 +4,8 @@ import static com.codurance.principle12.utils.Convert.asJsonString;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-import com.codurance.principle12.models.Board;
-import com.codurance.principle12.models.Column;
+import com.codurance.principle12.entities.Board;
+import com.codurance.principle12.entities.Column;
 import com.codurance.principle12.utils.HttpWrapper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;

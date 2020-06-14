@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.codurance.principle12.exceptions.ColumnNotFoundException;
-import com.codurance.principle12.models.Board;
-import com.codurance.principle12.models.Card;
+import com.codurance.principle12.entities.Board;
+import com.codurance.principle12.entities.Card;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

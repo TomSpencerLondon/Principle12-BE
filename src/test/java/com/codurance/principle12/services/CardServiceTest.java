@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 import com.codurance.principle12.factories.CardFactory;
-import com.codurance.principle12.models.Card;
+import com.codurance.principle12.entities.Card;
 import com.codurance.principle12.requests.NewCardRequestObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

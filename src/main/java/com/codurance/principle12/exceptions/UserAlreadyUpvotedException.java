@@ -1,0 +1,7 @@
+package com.codurance.principle12.exceptions;
+
+public class UserAlreadyUpvotedException extends RuntimeException{
+  public UserAlreadyUpvotedException() {
+    super("User already up-voted!");
+  }
+}
