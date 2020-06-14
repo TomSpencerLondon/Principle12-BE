@@ -16,7 +16,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class PostgresBoardRepository implements BoardRepository{
+public class PostgresBoardRepository implements BoardRepository {
   private final String INSERT_COLUMN = "insert into columns(title, board_id) values(?, ?)";
   private final String INSERT_BOARD = "insert into boards(title) values(?)";
   private final String SELECT_BOARD = "select * from boards where id = ?";

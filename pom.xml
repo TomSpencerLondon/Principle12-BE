@@ -116,13 +116,6 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>org.testcontainers</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>1.14.3</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger2</artifactId>
       <version>2.9.2</version>
@@ -165,7 +158,7 @@
         <version>0.8.5</version>
         <configuration>
           <excludes>
-            <exclude>**/config/*</exclude>
+            <exclude>**/config/**</exclude>
             <exclude>**/*Principle12.*</exclude>
           </excludes>
         </configuration>

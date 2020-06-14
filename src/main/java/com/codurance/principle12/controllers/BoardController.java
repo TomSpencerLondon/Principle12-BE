@@ -29,11 +29,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/board")
+@RequestMapping("/boards")
 public class BoardController extends BaseController {
 
   private final BoardService boardService;
-
   private final UserFactory userFactory;
   private final LoginService loginService;
   private ApplicationBoardService applicationBoardService;
@@ -46,6 +45,13 @@ public class BoardController extends BaseController {
     this.loginService = loginService;
     this.applicationBoardService = applicationBoardService;
   }
+
+  @GetMapping
+  public List<Board> getUsersBoards(@RequestHeader(HttpHeaders.AUTHORIZATION) String token)
+      throws GeneralSecurityException, IOException {
+    return boardService.getUsersBoards(userFactory.create(token));
+  }
+
   @GetMapping(value = "/{id}")
   public BoardResponseObject getBoard(@PathVariable Long id,
       @RequestHeader(HttpHeaders.AUTHORIZATION) String token)

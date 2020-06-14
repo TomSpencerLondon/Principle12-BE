@@ -6,7 +6,9 @@ import com.codurance.principle12.requests.NewCardRequestObject;
 import com.codurance.principle12.requests.UpVoteRequestObject;
 import com.codurance.principle12.responses.CardResponseObject;
 import com.codurance.principle12.responses.CardResponseObjectFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ApplicationCardService {
   private final UserService userService;
   private final CardService cardService;

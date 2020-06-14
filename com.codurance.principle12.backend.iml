@@ -148,20 +148,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.2.6.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.postgresql:postgresql:42.2.12" level="project" />
-    <orderEntry type="library" name="Maven: org.testcontainers:postgresql:1.14.3" level="project" />
-    <orderEntry type="library" name="Maven: org.testcontainers:jdbc:1.14.3" level="project" />
-    <orderEntry type="library" name="Maven: org.testcontainers:database-commons:1.14.3" level="project" />
-    <orderEntry type="library" name="Maven: org.testcontainers:testcontainers:1.14.3" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains:annotations:19.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.20" level="project" />
-    <orderEntry type="library" name="Maven: org.rnorth.duct-tape:duct-tape:1.0.8" level="project" />
-    <orderEntry type="library" name="Maven: org.rnorth.visible-assertions:visible-assertions:2.1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.rnorth:tcp-unix-socket-proxy:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.kohlschutter.junixsocket:junixsocket-native-common:2.0.4" level="project" />
-    <orderEntry type="library" name="Maven: org.scijava:native-lib-loader:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.kohlschutter.junixsocket:junixsocket-common:2.0.4" level="project" />
-    <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:5.5.0" level="project" />
-    <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.5.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:2.9.2" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.20" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-models:1.5.20" level="project" />
@@ -177,5 +163,19 @@
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.mapstruct:mapstruct:1.2.0.Final" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.testcontainers:postgresql:1.14.3" level="project" />
+    <orderEntry type="library" name="Maven: org.testcontainers:jdbc:1.14.3" level="project" />
+    <orderEntry type="library" name="Maven: org.testcontainers:database-commons:1.14.3" level="project" />
+    <orderEntry type="library" name="Maven: org.testcontainers:testcontainers:1.14.3" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:19.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.20" level="project" />
+    <orderEntry type="library" name="Maven: org.rnorth.duct-tape:duct-tape:1.0.8" level="project" />
+    <orderEntry type="library" name="Maven: org.rnorth.visible-assertions:visible-assertions:2.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.rnorth:tcp-unix-socket-proxy:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.kohlschutter.junixsocket:junixsocket-native-common:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.scijava:native-lib-loader:2.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.kohlschutter.junixsocket:junixsocket-common:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:5.5.0" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.5.0" level="project" />
   </component>
 </module>

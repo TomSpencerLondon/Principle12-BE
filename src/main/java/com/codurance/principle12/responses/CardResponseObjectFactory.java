@@ -1,7 +1,9 @@
 package com.codurance.principle12.responses;
 
 import com.codurance.principle12.entities.Card;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CardResponseObjectFactory {
   public CardResponseObject create(Card newCard, Long userId, String author) {
     Integer numberOfVoters = newCard.getVoters().size();
