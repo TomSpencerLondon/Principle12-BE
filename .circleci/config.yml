@@ -5,9 +5,8 @@ orbs:
 
 jobs:
   test:
+    machine: true
     working_directory: ~/app
-    docker:
-      - image: circleci/openjdk:11-stretch-node
     steps:
       - checkout
 
@@ -20,7 +19,7 @@ jobs:
   deploy:
     working_directory: ~/app
     machine:
-      - image: ubuntu-1604:201903-01
+      image: ubuntu-1604:201903-01
     steps:
       - checkout
 
