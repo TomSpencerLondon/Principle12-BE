@@ -1,5 +1,6 @@
-package com.codurance.principle12.config;
+package com.codurance.principle12.config.web;
 
+import com.codurance.principle12.config.Environment;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 import com.google.api.client.http.HttpTransport;
@@ -15,8 +16,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 @Component
-@Profile("!" + Environment.TEST)
-public class GoogleTokenAuthenticator implements HandlerInterceptor {
+@Profile({Environment.PROD, Environment.DEV})
+public class GoogleTokenAuthenticator implements HandlerInterceptor, TokenAuthenticator {
 
   private String CLIENT_ID = "726246748089-oo8hruu919d2oers0j6h8sam6o1444ug.apps.googleusercontent.com";
 
@@ -31,6 +32,20 @@ public class GoogleTokenAuthenticator implements HandlerInterceptor {
     }
 
     return true;
+  }
+
+  @Override
+  public String getEmail(String token) throws GeneralSecurityException, IOException {
+    GoogleIdTokenVerifier verifier = buildGoogleIdTokenVerifier();
+    GoogleIdToken idToken = verifier.verify(token);
+    return idToken.getPayload().get("email").toString();
+  }
+
+  @Override
+  public String getUsername(String token) throws GeneralSecurityException, IOException {
+    GoogleIdTokenVerifier verifier = buildGoogleIdTokenVerifier();
+    GoogleIdToken idToken = verifier.verify(token);
+    return idToken.getPayload().get("name").toString();
   }
 
   private void authenticateToken(String token, HttpServletRequest request)
