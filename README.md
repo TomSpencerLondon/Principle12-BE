@@ -23,5 +23,5 @@ For continuous integration it uses [CircleCI](https://circleci.com/) and for the
 You can run the tests by using `$ mvn test`.
 
 ### Documentation
-Retropolis-BE documentation is available [here](https://github.com/codurance/Retropolis-BE/wiki)
+Principle12-BE documentation is available [here](https://github.com/TomSpencerLondon/Principle12-BE/wiki)
 
