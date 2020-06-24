@@ -4,7 +4,7 @@ branch-defaults:
 deploy:
   artifact: target/com.codurance.principle12.backend-0.0.1-SNAPSHOT.jar
 global:
-  application_name: principleBe-env
+  application_name: PrincipleBeEnv
   default_ec2_keyname: null
   default_platform: Corretto 11 running on 64bit Amazon Linux 2/3.0.1
   default_region: eu-west-2
