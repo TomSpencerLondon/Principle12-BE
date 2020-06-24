@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: PrinciplebeEnv-env
+    environment: Principlebeenv-env
 deploy:
   artifact: target/com.codurance.principle12.backend-0.0.1-SNAPSHOT.jar
 global:

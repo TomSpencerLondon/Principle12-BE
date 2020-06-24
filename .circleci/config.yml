@@ -43,7 +43,7 @@ jobs:
 
       - run:
           name: Deploying
-          command: eb deploy PrinciplebeEnv-env --debug
+          command: eb deploy Principlebeenv-env --debug
 
 workflows:
   version: 2
