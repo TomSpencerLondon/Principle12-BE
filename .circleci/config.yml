@@ -43,7 +43,7 @@ jobs:
 
       - run:
           name: Deploying
-          command: eb deploy Principle12Be-env --debug
+          command: eb deploy Principle12Backend-env --debug
 
 workflows:
   version: 2
